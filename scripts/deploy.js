@@ -3,7 +3,7 @@ const main = async () => {
     const accountBalance = await deployer.getBalance();
   
     console.log("Deploying contracts with account: ", deployer.address);
-    console.log("Account balance: ", accountBalance.toString());
+    console.log("Account balance: ", (accountBalance*10^-8).toString());
   
     const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
     const waveContract = await waveContractFactory.deploy();

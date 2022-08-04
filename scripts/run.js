@@ -27,6 +27,7 @@ const main = async () => {
     waveCount = await waveContract.getTotalWaves();
     
     console.log("The signers are : ", await hre.ethers.getSigners())
+    console.log("the balance of the deployer is : ", await owner.getBalance())
 
   };
   
